@@ -1,0 +1,38 @@
+1. **Query Secrets in Secret Manager**:
+
+   ```bash
+   aws secretsmanager get-secret-value --secret-id YourSecretName
+   ```
+
+2. **Retrieve Running ECS Task**:
+
+   ```bash
+   task_arn=$(aws ecs list-tasks --cluster YourClusterName --desired-status RUNNING --query "taskArns[0]" --output text)
+   aws ecs describe-tasks --cluster YourClusterName --tasks $task_arn
+   ```
+
+3. **Retrieve Latest Task Definition**:
+
+   ```bash
+   latest_revision=$(aws ecs describe-task-definition --task-definition YourTaskDefinition --query "taskDefinition.revision" --output text)
+   aws ecs describe-task-definition --task-definition YourTaskDefinition:$latest_revision
+   ```
+
+4. **Start ECS Service**:
+
+   ```bash
+   aws ecs update-service --cluster YourClusterName --service YourServiceName --desired-count 1
+   ```
+
+5. **Stop ECS Service**:
+
+   ```bash
+   aws ecs update-service --cluster YourClusterName --service YourServiceName --desired-count 0
+   ```
+
+6. **Query Latest Stream in CloudWatch Log Group**:
+
+   ```bash
+   latest_stream=$(aws logs describe-log-streams --log-group-name YourLogGroupName --order-by LastEventTime --descending true --max-items 1 --query "logStreams[0].logStreamName" --output text)
+   echo "Latest log stream: $latest_stream"
+   ```
