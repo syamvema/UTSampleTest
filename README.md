@@ -20,6 +20,7 @@ spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 
 ### Creating Schema and Inserting Data on Initialization
 **schema.sql** – To initialize the schema ie.create tables and dependencies.
+
 **data.sql** – To insert default data rows.
 
 ### Access the H2 Database from Browser using below URL
