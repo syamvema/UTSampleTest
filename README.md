@@ -1,14 +1,10 @@
-RESTful Spring boot application, wrapped in Docker, that demonstrates a
-connection to H2 database Scripts to build an SQL compliant database
-that has tables, views, and at least one stored procedure/function
-(preferably using Flyway) 
 
-# spring-boot-project-with-h2-db
+## spring-boot-project-with-h2-db
 Spring boot project with H2 memory database, performing create, delete, get and update operations. 
 Handling spring boot way global exception handling for Rest End points
 
 Used maven dependencies for building the projects
-# In-Memory Database Configuration
+## In-Memory Database Configuration
 configured the following properties in appication.properties file
 
 spring.datasource.url=jdbc:h2:mem:testdb
