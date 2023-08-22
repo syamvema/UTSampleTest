@@ -10,11 +10,14 @@ configured the following properties in appication.properties file
 spring.datasource.url=jdbc:h2:mem:testdb
 
 spring.datasource.driverClassName=org.h2.Driver
+
 spring.datasource.username=sa
+
 spring.datasource.password=
+
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 
-#Creating Schema and Inserting Data on Initialization
+### Creating Schema and Inserting Data on Initialization
 **schema.sql** – To initialize the schema ie.create tables and dependencies.
 **data.sql** – To insert default data rows.
 
@@ -25,5 +28,5 @@ http://localhost:8080/h2.
 Login to the data base and verify the table structure and default data inserted through SQL files.
 
 
-
+To access AWS CLI Scripts
 [AWS CLI Scripts](https://github.com/syamvema/UTSampleTest/blob/main/AwsCli.txt)
