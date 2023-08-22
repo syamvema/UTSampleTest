@@ -8,6 +8,7 @@ Used maven dependencies for building the projects
 configured the following properties in appication.properties file
 
 spring.datasource.url=jdbc:h2:mem:testdb
+
 spring.datasource.driverClassName=org.h2.Driver
 spring.datasource.username=sa
 spring.datasource.password=
